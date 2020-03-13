@@ -1,0 +1,21 @@
+{
+  "name": "dyn2svg",
+  "version": "0.0.1",
+  "description": "Generate svg previews from dynamo script",
+  "main": "dyn2svg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dynamo",
+    "dyn",
+    "svg"
+  ],
+  "author": "infeeeee",
+  "license": "MIT",
+  "dependencies": {
+    "svg.js": "^2.7.1",
+    "svgdom": "0.0.21",
+    "word-wrap": "^1.2.3"
+  }
+}
