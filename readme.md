@@ -4,6 +4,8 @@ Node module for generating svg preview for [Dynamo](https://dynamobim.org/) 2.x 
 
 Absolutely not finished, mostly working.
 
+This is just the module, for a working application see [dynViewer](https://github.com/infeeeee/dynViewer)
+
 ## Install
 
 ```
@@ -12,11 +14,15 @@ npm install infeeeee/dyn2svg
 
 ## Usage
 
+### Browser
+
+TODO
+
 ### Nodejs
 
 ``` javascript
 const fs = require('fs')
-const dyn2svg = require('dyn2svg')
+require('dyn2svg')
 
 fs.readFileSync("path/to/graph.dyn", "utf-8")
     .dyn2svg()
