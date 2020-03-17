@@ -4,7 +4,7 @@ Node module for generating svg preview for [Dynamo](https://dynamobim.org/) 2.x 
 
 Absolutely not finished, mostly working.
 
-This is just the module, for a working application see [dynViewer](https://github.com/infeeeee/dynViewer)
+This is just the module, for a working application see [dynConvert](https://github.com/infeeeee/dynConvert)
 
 ## Install
 
