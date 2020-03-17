@@ -303,9 +303,11 @@ String.prototype.dyn2svg = function () {
             coords.end = {}
 
             // create group
-            let wireGroup = canvas.group().attr({
-                id: dynObj.Connectors[i].Id
-            })
+            let wireGroup = canvas.group()
+                .attr({
+                    id: dynObj.Connectors[i].Id
+                })
+                .back()
 
             // calculate coordinates
             canvas.each(function () {
@@ -382,7 +384,8 @@ String.prototype.dyn2svg = function () {
                 // create rect
                 canvas.rect(element.Width, element.Height).attr({
                         fill: "#" + groupColor[2] + groupColor[3] + groupColor[4],
-                        "fill-opacity": (parseInt(groupColor[1], 16) / 255),
+                        // "fill-opacity": (parseInt(groupColor[1], 16) / 255),
+                        "fill-opacity": 0.6,
                         stroke: "none",
                     })
                     .addClass("annotationRect")
@@ -409,9 +412,9 @@ String.prototype.dyn2svg = function () {
                     .addTo(annotationGroup).move(nodeStyle.border, nodeStyle.border)
 
                 // move nodes to groups
-                for (let j = 0; j < element.Nodes.length; j++) {
-                    canvas.select("#" + element.Nodes[j]).toParent(annotationGroup)
-                }
+                // for (let j = 0; j < element.Nodes.length; j++) {
+                //     canvas.select("#" + element.Nodes[j]).toParent(annotationGroup)
+                // }
 
                 // add class to group
                 annotationGroup.addClass("groupGroup")
@@ -470,7 +473,7 @@ String.prototype.dyn2svg = function () {
                 if (inside && currentInner.id != this.attr("id")) {
                     this.after(that)
                     // that.front()
-                } 
+                }
             })
         })
 
